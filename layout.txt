@@ -1,0 +1,14 @@
+Directory layout:
+build.d - directory for ant build parts
+lib - jars for build and tests
+src - source dir
+target - reports target dir
+ + story-results - results from easb
+ + test-results - junit/spock test results
+tests - tests dir
+ + geb-stories - easyb integration stories (to be run with geb)
+ + grooovy - junit/spock tests
+ + integration - junit/spock integration tests
+ + resources - resources for all tests
+ + stories - easyb stories (non-integration)
+war - web archive dir (with classic gaelyk layout)

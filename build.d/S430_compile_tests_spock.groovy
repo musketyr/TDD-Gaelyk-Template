@@ -1,0 +1,1 @@
+compileTests(testsGroovy, buildDir, testsResources)

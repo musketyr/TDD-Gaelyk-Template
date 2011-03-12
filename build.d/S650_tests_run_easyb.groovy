@@ -1,0 +1,1 @@
+runEasyB("tests/stories", "story")

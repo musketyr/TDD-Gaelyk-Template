@@ -1,0 +1,1 @@
+runJUnit(buildDir)

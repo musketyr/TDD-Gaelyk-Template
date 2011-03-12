@@ -1,0 +1,1 @@
+ant.taskdef name: "groovyc", classname: "org.codehaus.groovy.ant.Groovyc"

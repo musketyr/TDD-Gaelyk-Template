@@ -1,0 +1,1 @@
+ant.taskdef name:'easyb', classname:'org.easyb.ant.BehaviorRunnerTask', classpathref:LIB_CLASSPATH

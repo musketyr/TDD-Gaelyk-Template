@@ -1,0 +1,1 @@
+compileTests(testsIntegration, integrationDir, testsResources)

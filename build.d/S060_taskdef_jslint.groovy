@@ -1,0 +1,1 @@
+ant.taskdef name:"jslint", classname:"com.googlecode.jslint4java.ant.JSLintTask", classpath:"$libDir/jslint4java-1.4.6.jar"

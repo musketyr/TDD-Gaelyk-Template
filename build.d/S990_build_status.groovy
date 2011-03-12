@@ -1,0 +1,1 @@
+ant.echo "Build OK"
