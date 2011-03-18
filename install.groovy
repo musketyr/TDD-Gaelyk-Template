@@ -23,9 +23,9 @@ class InstallFromGit {
 		new AntBuilder().sequential{
 			copy(todir: stage.path){
 				fileset(dir: where.path){
-					exclude(name: "*build.groovy")
+					exclude(name: "*build.*")
 					exclude(name: "*install.groovy")
-					exclude(name: "*remove.groovy")
+					exclude(name: "*uninstall.groovy")
 					exclude(name: ".**")
 					exclude(name: "**/.*/**")
 				}
@@ -61,6 +61,7 @@ class InstallFromGit {
 		if (pluginsDir.exists()) {
 			def plugins = new File("./war/WEB-INF/plugins.groovy")
 			if(!plugins.exists()){
+				new AntBuilder().sequential{ mkdir(dir: "./war/WEB-INF") }
 				assert plugins.createNewFile()
 			}
 			pluginsDir.list().each {
