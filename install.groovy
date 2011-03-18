@@ -24,6 +24,7 @@ class InstallFromGit {
 			copy(todir: stage.path){
 				fileset(dir: where.path){
 					exclude(name: "*build.*")
+					exclude(name: "*README*.*")
 					exclude(name: "*install.groovy")
 					exclude(name: "*uninstall.groovy")
 					exclude(name: ".**")
@@ -35,15 +36,14 @@ class InstallFromGit {
 					exclude(name: "**/.plugins.d/history.xml")
 				}
 			}
-			
-			installPlugins(where)
+			mkdir(dir: "./.plugins.d")
 		}
 		
+		installPlugins(where)
 		addHistory(stage, pluginUrl)
 		
 		new AntBuilder().sequential{
 			
-			mkdir(dir: "./.plugins.d")
 			
 			addHistory(stage, pluginUrl)
 			

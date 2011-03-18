@@ -20,9 +20,12 @@ pluginHistory.file.each{
 	if(it.@name.text() =~ "/war/WEB-INF/plugins/\\w+.groovy") {
 		removeFromPlugins(theFile.name - ".groovy")
 	}
-	assert theFile.exists()
-	theFile.deleteOnExit()
-	println "Deleted $theFile.path"
+	if(theFile.exists()){
+		theFile.deleteOnExit()
+		println "File $theFile.path marked for deletion."
+	} else {
+		println "File $theFile.path marked missing."
+	}
 }
 println "All files deleted"
 
